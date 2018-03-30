@@ -1,0 +1,17 @@
+.wrapper {
+  display: grid; /* Like "display: flex" in Flexbox */
+  grid-template-columns: 70% 30%;    /* Provides main and sidebar columns */ /* fractionals are recommended i.e. 1fr 1fr */
+  grid-column-gap: 1em;  /* Provides a margin between columns */
+  grid-row-gap: 1em;  /* Provides a margin between rows */
+  grid-gap: 1em;  /* Provides a margin between columns and rows */
+}
+
+.wrapper > div {
+  background: #EEE;
+  padding: 1em;
+}
+
+/* Ever other div has a different shade of grey */
+.wrapper > div:nth-child(odd) {
+  background: #DDD;
+}

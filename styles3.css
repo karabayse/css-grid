@@ -1,0 +1,45 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 1em;
+  /* justify-items: start;  Places item at the start of its column */
+  /* justify-items: center; */
+  /* justify-items: end */
+  justify-items: stretch;  /* Default option */
+  align-items: center;
+}
+
+.wrapper > div {
+  background: #EEE;
+  padding: 1em;
+}
+
+/* Ever other div has a different shade of grey */
+.wrapper > div:nth-child(odd) {
+  background: #DDD;
+}
+
+.box1 {
+  align-self: start; /* Aligns to the top */
+  grid-column: 1/3;  /* Spans from 1 to 3 */
+  grid-row: 1/3;
+}
+
+.box2 {
+  align-self: end;  /* Aligns to the bottom */
+  grid-column: 3;
+  grid-row: 1/3;
+}
+
+.box3 {
+  justify-self: end;  /* Aligns to the right */
+  grid-column: 2/4;
+  grid-row: 3;
+}
+
+.box4 {
+  grid-column: 1;
+  grid-row: 2/4;
+  border: 1px solid #333;
+}
